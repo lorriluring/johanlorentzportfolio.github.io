@@ -219,14 +219,40 @@ body.dark-mode .project-card {
   border-color: #7c4dff;
 }
 
-body.dark-mode a {
-  color: #b39ddb;
+body.dark-mode a,
+body.dark-mode a:visited {
+  color: #b39ddb; /* Light purple for readability */
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+body.dark-mode a:hover,
+body.dark-mode a:focus {
+  color: #fff; /* Even brighter on hover/focus */
+  background: #2a1a40;
 }
 
 body.dark-mode nav a:hover,
 body.dark-mode nav a:focus {
   background: #2a1a40;
   color: #fff;
+}
+
+body.dark-mode #contact a,
+body.dark-mode #contact a:visited {
+  color: #b39ddb !important; /* Light purple for readability */
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+body.dark-mode #contact a:hover,
+body.dark-mode #contact a:focus {
+  color: #fff !important;
+  background: #2a1a40;
+}
+
+body.dark-mode .intro-text p {
+  color: #b39ddb !important; /* Light purple for readability */
 }
 
 #darkModeToggle {
