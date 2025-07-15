@@ -1,11 +1,11 @@
-// Fade in on scroll
+// Fade in on scroll using IntersectionObserver
 const sections = document.querySelectorAll('section');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // Optional: stop observing after reveal
     }
   });
 }, {
@@ -13,8 +13,6 @@ const observer = new IntersectionObserver(entries => {
 });
 
 sections.forEach(section => {
-  section.style.opacity = 0;
-  section.style.transform = 'translateY(30px)';
-  section.style.transition = 'all 0.6s ease';
+  section.classList.remove('visible'); // Ensure hidden by default
   observer.observe(section);
 });
