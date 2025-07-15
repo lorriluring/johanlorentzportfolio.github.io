@@ -115,9 +115,9 @@ nav a:focus {
 /* Section spacing */
 section {
   margin-top: 6rem;
-  opacity: 0;
+  /* opacity: 0;
   transform: translateY(30px);
-  transition: all 0.6s ease;
+  transition: all 0.6s ease; */
 }
 section.visible {
   opacity: 1;
@@ -139,21 +139,24 @@ section p {
 /* Projects */
 .project-list {
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem; /* More space between cards */
   margin-top: 2rem;
 }
 .project-card {
-  border: 1px solid #d6c8f5;
-  background: rgba(140, 98, 255, 0.06); /* Very subtle purple */
-  padding: 1.5rem;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem 1rem;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+  background: rgba(140, 98, 255, 0.06);
   box-shadow: 0 2px 8px rgba(140, 98, 255, 0.04);
+  transition: box-shadow 0.3s, background 0.3s;
 }
 .project-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 8px 24px rgba(140, 98, 255, 0.10);
   background: rgba(140, 98, 255, 0.12); /* Slightly more purple on hover */
+}
+.project-card h2 {
+  margin-bottom: 1rem;
 }
 .project-card h3 {
   color: #7c4dff; /* Purple accent for titles */
@@ -162,8 +165,30 @@ section p {
   font-weight: 700;
 }
 .project-card p {
+  margin-bottom: 1rem; /* Space between paragraphs */
   font-weight: 400;
   letter-spacing: 0.01em;
+}
+.project-image-link {
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+.project-image {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.4s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 4px 16px rgba(140, 98, 255, 0.10);
+}
+.project-image-link:hover .project-image,
+.project-image-link:focus .project-image {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 8px 32px rgba(140, 98, 255, 0.18);
+  filter: brightness(1.08) saturate(1.1);
 }
 
 /* Contact */
@@ -271,4 +296,9 @@ body.dark-mode .intro-text p {
 #darkModeToggle:focus {
   background: #f3eaff;
   color: #4b2bb6;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
