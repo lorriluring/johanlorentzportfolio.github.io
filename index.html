@@ -3,27 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Your Name</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="intro">
     <h1>Your Name</h1>
-    <p>UX Designer | Developer | Your Role</p>
+    <p>UX Designer & Developer</p>
   </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I build simple, human-centred digital experiences. Currently focused on design, usability, and interface logic.</p>
+  </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Project Title</h3>
-      <p>Short description of your project.</p>
-      <a href="#">View project</a>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>Short summary of what it is and what you did.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>Short summary of what it is and what you did.</p>
+      </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: you@example.com</p>
+    <p>Reach me at <a href="mailto:you@example.com">you@example.com</a></p>
   </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
