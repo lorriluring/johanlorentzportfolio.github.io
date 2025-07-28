@@ -6,7 +6,7 @@
 }
 body {
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  background: #fff;
+  background: linear-gradient(120deg, #f8f6ff 0%, #fff 100%);
   color: #111;
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -114,10 +114,14 @@ nav a:focus {
 
 /* Section spacing */
 section {
+  border-top: 1px solid #ede7f6;
+  padding-top: 3rem;
   margin-top: 6rem;
-  /* opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease; */
+  background: none;
+}
+section:first-of-type {
+  border-top: none;
+  padding-top: 0;
 }
 section.visible {
   opacity: 1;
@@ -129,6 +133,16 @@ section h2 {
   text-align: center;
   letter-spacing: 0.02em;
   font-weight: 700;
+}
+section h2::before {
+  content: '';
+  display: inline-block;
+  width: 1.25em;
+  height: 0.25em;
+  background: #7c4dff;
+  border-radius: 2px;
+  margin-right: 0.5em;
+  vertical-align: middle;
 }
 section p {
   text-align: center;
@@ -178,11 +192,14 @@ section p {
 .project-image {
   width: 100%;
   max-width: 320px;
-  aspect-ratio: 16/9;
+  height: 180px;           /* Fixed height */
   object-fit: cover;
   border-radius: 12px;
   transition: transform 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.4s cubic-bezier(.4,0,.2,1);
   box-shadow: 0 4px 16px rgba(140, 98, 255, 0.10);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .project-image-link:hover .project-image,
 .project-image-link:focus .project-image {
@@ -219,6 +236,9 @@ section.visible {
   }
   .project-card {
     padding: 1rem;
+  }
+  .project-image {
+    height: 120px;         /* Smaller height on mobile */
   }
 }
 
@@ -301,4 +321,32 @@ body.dark-mode .intro-text p {
 header {
   text-align: center;
   margin-bottom: 2.5rem;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+}
+
+.read-more-btn {
+  display: inline-block;
+  padding: 0.5em 1.3em;
+  background: #7c4dff;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(140, 98, 255, 0.08);
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+.read-more-btn:hover,
+.read-more-btn:focus {
+  background: #5f36c7;
+  box-shadow: 0 4px 16px rgba(140, 98, 255, 0.16);
+  transform: translateY(-2px) scale(1.04);
+  color: #fff;
 }
