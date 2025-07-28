@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>Projekt Grötvik 2024–2025 – Johan Lorentz</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<script src="script.js"></script>
-</body>
-</html>
+    <nav>
+        <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <button id="darkModeToggle" aria-label="Toggle dark mode" class="darkmode-toggle-btn">
+          <svg width="38" height="38" viewBox="0 0 28 28" fill="none">
+            <path d="M21 18.5A10 10 0 0 1 9.5 7c0-.4 0-.8.1-1.2a1 1 0 0 0-1.3-1.2A12 12 0 1 0 22.4 22.2a1 1 0 0 0-1.2-1.3c-.4.1-.8.1-1.2.1Z" fill="currentColor"/>
+          </svg>
+        </button>
+    </nav>
+    <div class="container project-case">
+        <header class="case-header">
+            <h1>Projekt Grötvik 2024–2025</h1>
+            <p class="case-meta">
+                <strong>Client:</strong> Trafikverket &nbsp;|&nbsp;
+                <strong>Role:</strong> Workshop designer & research lead &nbsp;|&nbsp;
+                <strong>Focus:</strong> Sustainable tourism & seasonal mobility
+            </p>
+        </header>
+        <section class="case-section side-by-side">
+            <div class="carousel">
+                <button class="carousel-btn prev" aria-label="Previous image">&#8592;</button>
+                <div class="carousel-track">
+                    <img src="images/grotvik-hero1.jpeg" alt="Grötvik overview 1" class="carousel-image active" />
+                    <img src="images/grotvik-hero2.jpeg" alt="Grötvik overview 2" class="carousel-image" />
+                    <!-- Add more images as needed -->
+                </div>
+                <button class="carousel-btn next" aria-label="Next image">&#8594;</button>
+            </div>
+            <div class="case-text">
+                <h2>Overview</h2>
+                <p>
+                    This project addressed how design can support sustainable tourism and mobility in the coastal village of Grötvik, aiming to balance accessibility with the preservation of local identity. I was responsible for designing and leading all workshops, conducting interviews, transcribing material, coding qualitative data, and synthesising the results into actionable design insights.
+                </p>
+            </div>
+        </section>
+        <section class="case-section side-by-side">
+            <div class="carousel">
+                <button class="carousel-btn prev" aria-label="Previous image">&#8592;</button>
+                <div class="carousel-track">
+                    <img src="images/grotvik-process1.jpg" alt="Workshop process 1" class="carousel-image active" />
+                    <img src="images/grotvik-process2.jpeg" alt="Workshop process 2" class="carousel-image" />
+                    <img src="images/grotvik-process3.jpeg" alt="Workshop process 3" class="carousel-image" />
+                </div>
+                <button class="carousel-btn next" aria-label="Next image">&#8594;</button>
+            </div>
+            <div class="case-text">
+                <h2>Process</h2>
+                <p>
+                    Using a design ethnography approach, I engaged local residents and stakeholders in participatory sessions to uncover everyday challenges, seasonal conflicts, and long-term desires for the area. Through tools such as future scenario development and value mapping, I gathered a broad spectrum of perspectives, from concrete mobility needs to reflections on what it means to protect Grötvik’s social and environmental landscape.
+                </p>
+            </div>
+        </section>
+        <section class="case-section side-by-side">
+            <div class="carousel">
+                <button class="carousel-btn prev" aria-label="Previous image">&#8592;</button>
+                <div class="carousel-track">
+                    <img src="images/grotvik-flexhive1.jpg" alt="FLEX-HIVE concept 1" class="carousel-image active" />
+                    <img src="images/grotvik-flexhive2.jpg" alt="FLEX-HIVE concept 2" class="carousel-image" />
+                </div>
+                <button class="carousel-btn next" aria-label="Next image">&#8594;</button>
+            </div>
+            <div class="case-text">
+                <h2>Outcome</h2>
+                <p>
+                    The insights were translated into a conceptual design proposal: FLEX-HIVE, a modular, mobile hub that combines digital and physical functions to promote communication, orientation, and community interaction. The concept is designed to be flexible across seasons, support micromobility, and act as a point of convergence for both locals and visitors. Its form and function draw directly from stakeholder input and site-specific values.
+                </p>
+            </div>
+        </section>
+        <section class="case-section side-by-side">
+            <div class="case-text">
+                <h2>Reflection</h2>
+                <p>
+                    This project deepened my expertise in field-based research, participatory methods, and the translation of complex data into situated design proposals. It also reinforced my belief in the value of design that is rooted in real contexts and driven by human needs.
+                </p>
+            </div>
+        </section>
+        <footer style="text-align:center; color:#bbb; font-size:0.95rem; margin:2.5rem 0 1rem 0;">
+            &copy; Johan Lorentz 2025
+        </footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
