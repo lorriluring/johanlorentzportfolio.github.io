@@ -116,8 +116,9 @@ nav a:focus {
 /* Section spacing and animation */
 section, .case-section {
   border-top: 1px solid #ede7f6;
-  padding-top: 3rem;
-  margin-top: 6rem;
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
   background: none;
   opacity: 0;
   transform: translateY(30px);
@@ -137,7 +138,7 @@ section h2, .case-section h2 {
   border: 1px solid #ede7f6;
   padding: 0.5em 1.2em;
   display: inline-block;
-  margin: 0 auto 1.2rem auto;
+  margin: 0 auto 0.7rem auto;
   text-align: center;
   box-shadow: 0 2px 8px rgba(140,98,255,0.06);
   position: relative;
@@ -399,8 +400,8 @@ section.visible {
 .side-by-side {
   display: flex;
   align-items: flex-start;
-  gap: 2.5rem;
-  margin-bottom: 2.5rem;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 .side-by-side .carousel {
   flex: 1 1 50%;
