@@ -1,4 +1,3 @@
-
 :root {
   --accent: #344532;
   --accent-light: #4a5e43;
@@ -97,6 +96,25 @@ nav a:focus {
   justify-content: center;
   gap: 2.5rem;
   flex-wrap: wrap;
+}
+.intro-text h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  color: #222;
+  line-height: 1.1;
+}
+
+.intro-text p {
+  color: #444;
+  font-size: 1.15rem;
+  margin-bottom: 0.2em;
+}
+
+.intro-text .degree {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.2em;
 }
 .intro-text {
   flex: 1 1 220px;
@@ -464,7 +482,7 @@ section.visible {
   position: fixed;
   z-index: 9999;
   inset: 0;
-  background: rgba(30, 20, 60, 0.85);
+  background: rgba(34, 69, 50, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -607,4 +625,13 @@ body.dark-mode .case-text h3,
 body.dark-mode .case-text li,
 body.dark-mode .case-text span {
   color: var(--accent-lighter) !important;
+}
+
+
+/* Lightbox overlay in Pantone green, not purple */
+.lightbox-overlay {
+  background: rgba(34, 69, 50, 0.92);
+}
+body.dark-mode .lightbox-overlay {
+  background: rgba(34, 48, 30, 0.97);
 }
