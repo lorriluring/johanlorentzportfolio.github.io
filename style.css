@@ -192,7 +192,7 @@ section p, .case-section p {
   text-align: center;
   padding: 2rem 1rem 1.5rem 1rem;
   border-radius: 12px;
-  background: rgba(52, 69, 50, 0.06);
+  background: var(--accent-bg); /* or use the rgba above */
   box-shadow: 0 2px 8px rgba(52, 69, 50, 0.04);
   transition: box-shadow 0.3s, background 0.3s;
 }
