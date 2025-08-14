@@ -665,22 +665,63 @@ body.dark-mode .lightbox-overlay {
   margin: 2.5rem 0 1rem 0;
 }
 
-/* New Hero Intro Section */
+/* Minimalist Case Study Summary Block */
+.case-summary-block {
+  background: transparent;
+  border-left: 2.5px solid var(--accent-lighter);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.7em 0 0.7em 1.1em;
+  margin: 1.5em 0 2em 0;
+  max-width: 650px;
+  font-size: 1em;
+  line-height: 1.7;
+  color: #222;
+  text-align: left;
+}
+.case-summary-block strong {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+body.dark-mode .case-summary-block {
+  background: transparent;
+  border-left: 2.5px solid var(--accent);
+  color: var(--accent-lighter);
+  box-shadow: none;
+}
+body.dark-mode .case-summary-block strong {
+  color: var(--accent);
+}
+/* Minimalist Hero Intro Section */
 .hero-intro {
-  margin: 2.5em auto 2em auto;
-  max-width: 600px;
-  text-align: center;
-  background: #f7f7fa;
-  padding: 2em 1em 1.5em 1em;
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  background: transparent;
+  border-left: 2.5px solid var(--accent-lighter);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.7em 0 0.7em 1.1em;
+  margin: 2.2em 0 2.5em 0;
+  max-width: 650px;
+  font-size: 1em;
+  line-height: 1.7;
+  color: #222;
+  text-align: left;
 }
 .hero-intro h1 {
-  font-size: 1.4em;
-  margin-bottom: 0.7em;
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
   font-weight: 700;
+  color: var(--accent-light);
 }
 .hero-intro p {
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.6;
+}
+body.dark-mode .hero-intro {
+  background: transparent;
+  border-left: 2.5px solid var(--accent);
+  color: var(--accent-lighter);
+  box-shadow: none;
+}
+body.dark-mode .hero-intro h1 {
+  color: var(--accent);
 }
