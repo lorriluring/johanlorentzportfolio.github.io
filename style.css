@@ -664,3 +664,23 @@ body.dark-mode .lightbox-overlay {
   font-size: 0.95rem;
   margin: 2.5rem 0 1rem 0;
 }
+
+/* New Hero Intro Section */
+.hero-intro {
+  margin: 2.5em auto 2em auto;
+  max-width: 600px;
+  text-align: center;
+  background: #f7f7fa;
+  padding: 2em 1em 1.5em 1em;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.hero-intro h1 {
+  font-size: 1.4em;
+  margin-bottom: 0.7em;
+  font-weight: 700;
+}
+.hero-intro p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
