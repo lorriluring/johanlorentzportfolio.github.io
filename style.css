@@ -422,6 +422,56 @@ h2.section-heading {
 .case-section .case-media {
   margin-bottom: 1.6rem;
 }
+.case-section p + .case-steps,
+.case-section p + .case-list {
+  margin-top: 1.4rem;
+}
+
+/* Numbered process steps + decision list */
+.case-steps,
+.case-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 64ch;
+}
+.case-steps li,
+.case-list li {
+  position: relative;
+  padding-left: 1.7rem;
+  color: var(--text-muted);
+}
+.case-steps li strong,
+.case-list li strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.case-steps {
+  counter-reset: step;
+}
+.case-steps li {
+  counter-increment: step;
+}
+.case-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+.case-list li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
 
 /* Single image */
 .case-image {
