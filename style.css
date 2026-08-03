@@ -61,7 +61,7 @@ img {
 a {
   color: var(--text);
 }
-ul {
+ul, ol {
   list-style: none;
 }
 
