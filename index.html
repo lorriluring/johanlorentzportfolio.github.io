@@ -3,100 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Johan Lorentz Portfolio</title>
+  <title>Johan Lorentz — UX/UI &amp; Service Designer</title>
+  <meta name="description" content="Johan Lorentz is a UX/UI and Service Designer based in Sweden, working end to end from research to tested prototypes." />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-    </ul>
-    <button id="darkModeToggle" aria-label="Toggle dark mode" class="darkmode-toggle-btn">
-      <svg width="38" height="38" viewBox="0 0 28 28" fill="none">
-        <path d="M21 18.5A10 10 0 0 1 9.5 7c0-.4 0-.8.1-1.2a1 1 0 0 0-1.3-1.2A12 12 0 1 0 22.4 22.2a1 1 0 0 0-1.2-1.3c-.4.1-.8.1-1.2.1Z" fill="currentColor"/>
-      </svg>
-    </button>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Johan Lorentz</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="darkModeToggle" aria-label="Toggle dark mode" class="darkmode-toggle-btn">
+        <svg viewBox="0 0 28 28" fill="none">
+          <path d="M21 18.5A10 10 0 0 1 9.5 7c0-.4 0-.8.1-1.2a1 1 0 0 0-1.3-1.2A12 12 0 1 0 22.4 22.2a1 1 0 0 0-1.2-1.3c-.4.1-.8.1-1.2.1Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
   </nav>
 
-  <div class="container">
+  <main class="container">
 
-    <header class="intro">
-      <div class="intro-content">
-        <div class="intro-text">
-          <h1>Johan Lorentz</h1>
-          <p class="intro-blend">
-            UX/UI designer who takes ideas from research to tested prototypes in Figma.<br>
-            I work end to end with interviews, flows, interfaces, and testing.<br>
-            Based in Sweden. Open to relocation. Available to start <strong>ASAP</strong>.<br>
-            <span style="font-size:0.98em;">Contact: <a href="mailto:johan.lorentz@gmail.com">johan.lorentz@gmail.com</a> / <a href="https://www.linkedin.com/in/johan-lorentz" target="_blank">LinkedIn</a></span>
-          </p>
-          <p>Service Designer &amp; UX/UI Designer</p>
-          <p class="degree">BSc in UX/UI Design</p>
-          <p class="degree">MSc in Service Design</p>
+    <header class="hero">
+      <div class="hero-text">
+        <p class="hero-eyebrow">UX/UI Designer &amp; Service Designer</p>
+        <h1>Johan Lorentz</h1>
+        <p class="hero-lede">
+          I take ideas from research to tested prototypes — working end to end across interviews, flows, interfaces, and testing.
+        </p>
+        <div class="hero-meta">
+          <span>BSc UX/UI Design · MSc Service Design</span>
+          <span>Based in Sweden · Open to relocation · Available ASAP</span>
+          <a href="mailto:johan.lorentz@gmail.com">johan.lorentz@gmail.com</a>
+          <a href="https://www.linkedin.com/in/johan-lorentz" target="_blank" rel="noopener">LinkedIn</a>
         </div>
-        <img src="profileimg.jpg" alt="Johan Lorentz" class="intro-photo" />
       </div>
+      <img src="profileimg.jpg" alt="Johan Lorentz" class="hero-photo" />
     </header>
 
     <section id="about">
-      <h2>About</h2>
+      <h2 class="section-heading">About</h2>
       <p>
-        I’m a passionate designer with a strong interest in user-centered design and digital service innovation. My experience spans both collaborative and solo projects, shaping my skills in UX, interaction design, and creative problem-solving. I draw inspiration from both utopian and dystopian aesthetics to challenge assumptions and spark new perspectives.
+        I'm drawn to user-centered design and service innovation — projects that pair research rigor with a willingness to imagine differently. My work spans solo and collaborative projects, shaped by both utopian and dystopian thinking to challenge assumptions and open up new perspectives.
       </p>
       <ul class="about-list">
         <li>Skilled in UX, interaction design, and creative research</li>
         <li>Experienced in both team-based and independent projects</li>
         <li>Driven by curiosity, iteration, and purposeful design</li>
       </ul>
-      <p class="about-note">
-        This portfolio highlights projects that reflect my approach to creativity and meaningful design. If something catches your eye, I’d love to connect!
-      </p>
+      <p>This portfolio is a selection of that work — if something resonates, I'd love to connect.</p>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <div class="project-card">
-          <a href="grötvik.html" class="project-image-link">
-            <img src="images/grotvik-thumb.jpeg" alt="Projekt Grötvik" class="project-image" />
-          </a>
-          <h3>Projekt Grötvik 2024–2025</h3>
-          <p><a href="grötvik.html">See details for the project &rarr;</a></p>
-        </div>
-        <div class="project-card">
-          <a href="active8.html" class="project-image-link">
-            <img src="images/active8-thumb.png" alt="Active8 Planet" class="project-image" />
-          </a>
-          <h3>Active8 Planet 2021–2022</h3>
-          <p><a href="active8.html">See details for the project &rarr;</a></p>
-        </div>
-        <div class="project-card">
-          <a href="viaviridi.html" class="project-image-link">
-            <img src="images/viaviridi-thumb.png" alt="ViaViridi LCA Tool" class="project-image" />
-          </a>
-          <h3>ViaViridi LCA Tool 2021</h3>
-          <p><a href="viaviridi.html">See details for the project &rarr;</a></p>
-        </div>
+    <section id="work">
+      <h2 class="section-heading">Work</h2>
+      <div class="work-grid">
+
+        <a href="grötvik.html" class="work-item">
+          <div class="work-thumb">
+            <img src="images/grotvik-thumb.jpeg" alt="Projekt Grötvik" loading="lazy" />
+          </div>
+          <p class="work-meta">Trafikverket · 2024–2025</p>
+          <h3>Projekt Grötvik</h3>
+          <p>Sustainable tourism and mobility in a Swedish coastal village.</p>
+          <span class="work-link">Read the case study <span class="arrow">&rarr;</span></span>
+        </a>
+
+        <a href="active8.html" class="work-item">
+          <div class="work-thumb">
+            <img src="images/active8-thumb.png" alt="Active8 Planet" loading="lazy" />
+          </div>
+          <p class="work-meta">Volvo Cars, EU, Halmstad University · 2021–2022</p>
+          <h3>Active8 Planet</h3>
+          <p>A speculative training game for sustainability in mobility.</p>
+          <span class="work-link">Read the case study <span class="arrow">&rarr;</span></span>
+        </a>
+
+        <a href="viaviridi.html" class="work-item">
+          <div class="work-thumb">
+            <img src="images/viaviridi-thumb.png" alt="ViaViridi LCA Tool" loading="lazy" />
+          </div>
+          <p class="work-meta">ViaViridi · 2021</p>
+          <h3>ViaViridi LCA Tool</h3>
+          <p>Making Life Cycle Assessment accessible for construction clients.</p>
+          <span class="work-link">Read the case study <span class="arrow">&rarr;</span></span>
+        </a>
+
       </div>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
+      <h2 class="section-heading">Contact</h2>
       <ul class="contact-list">
-        <li><strong>Phone:</strong> <a href="tel:0736872647">0736872647</a></li>
-        <li><strong>Address:</strong> Stallknektsvägen 17, Helsingborg, Sweden</li>
-        <li><strong>Email:</strong> <a href="mailto:johan.lorentz@gmail.com">johan.lorentz@gmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/johan-lorentz" target="_blank">www.linkedin.com/in/johan-lorentz</a></li>
+        <li><strong>Email</strong> <a href="mailto:johan.lorentz@gmail.com">johan.lorentz@gmail.com</a></li>
+        <li><strong>Phone</strong> <a href="tel:0736872647">0736872647</a></li>
+        <li><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/johan-lorentz" target="_blank" rel="noopener">linkedin.com/in/johan-lorentz</a></li>
+        <li><strong>Address</strong> Stallknektsvägen 17, Helsingborg, Sweden</li>
       </ul>
     </section>
 
-  </div>
+  </main>
 
-  <footer class="site-footer">
-    &copy; Johan Lorentz 2025
+  <footer class="site-footer container">
+    &copy; Johan Lorentz 2026
   </footer>
 
   <script src="script.js"></script>

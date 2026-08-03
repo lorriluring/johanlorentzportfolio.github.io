@@ -1,71 +1,54 @@
 // Fade in on scroll using IntersectionObserver
-const sections = document.querySelectorAll('section');
+const revealTargets = document.querySelectorAll('section, .hero');
 
-const observer = new IntersectionObserver(entries => {
+const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      observer.unobserve(entry.target); // Optional: stop observing after reveal
+      revealObserver.unobserve(entry.target);
     }
   });
-}, {
-  threshold: 0.1
-});
+}, { threshold: 0.1 });
 
-sections.forEach(section => {
-  section.classList.remove('visible'); // Ensure hidden by default
-  observer.observe(section);
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  const introPhoto = document.querySelector('.intro-photo');
-  if (introPhoto) {
-    setTimeout(() => {
-      introPhoto.classList.add('visible');
-    }, 300); // Delay for a softer effect
-  }
+revealTargets.forEach(target => {
+  target.classList.remove('visible');
+  revealObserver.observe(target);
 });
 
 // Dark mode toggle
 function setDarkMode(enabled) {
-  if (enabled) {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('darkMode', 'true');
-  } else {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('darkMode', 'false');
-  }
+  document.body.classList.toggle('dark-mode', enabled);
+  localStorage.setItem('darkMode', enabled ? 'true' : 'false');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Dark mode button logic
   const darkModeToggle = document.getElementById('darkModeToggle');
   if (darkModeToggle) {
-    // Set initial state
     const darkMode = localStorage.getItem('darkMode') === 'true';
     setDarkMode(darkMode);
 
-    darkModeToggle.textContent = darkMode ? '☀️' : '🌙';
-
     darkModeToggle.addEventListener('click', () => {
-      const enabled = !document.body.classList.contains('dark-mode');
-      setDarkMode(enabled);
-      darkModeToggle.textContent = enabled ? '☀️' : '🌙';
+      setDarkMode(!document.body.classList.contains('dark-mode'));
     });
   }
 
-  // IntersectionObserver for .case-section elements
-  const caseSections = document.querySelectorAll('.case-section');
-  const caseObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  }, { threshold: 0.1 });
+  // Highlight the active nav link while scrolling the one-pager
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  if (navLinks.length) {
+    const sections = Array.from(navLinks)
+      .map(link => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
 
-  caseSections.forEach(section => {
-    section.classList.remove('visible'); // Ensure hidden by default
-    caseObserver.observe(section);
-  });
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const link = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (!link) return;
+        link.classList.toggle('active', entry.isIntersecting);
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    sections.forEach(section => navObserver.observe(section));
+  }
 });
 
 // Carousel functionality
@@ -77,9 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let current = 0;
 
     function showImage(idx) {
-      images.forEach((img, i) => {
-        img.classList.toggle('active', i === idx);
-      });
+      images.forEach((img, i) => img.classList.toggle('active', i === idx));
     }
 
     prevBtn.addEventListener('click', () => {
@@ -92,13 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
       showImage(current);
     });
 
-    // Optional: swipe support for touch devices
     let startX = 0;
-    carousel.querySelector('.carousel-track').addEventListener('touchstart', e => {
-      startX = e.touches[0].clientX;
-    });
-    carousel.querySelector('.carousel-track').addEventListener('touchend', e => {
-      let endX = e.changedTouches[0].clientX;
+    const track = carousel.querySelector('.carousel-track');
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+    track.addEventListener('touchend', e => {
+      const endX = e.changedTouches[0].clientX;
       if (endX - startX > 40) prevBtn.click();
       if (startX - endX > 40) nextBtn.click();
     });
@@ -107,19 +86,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Lightbox for carousel images
+// Lightbox for case study images
 document.addEventListener('DOMContentLoaded', () => {
-  // Create overlay element
   const overlay = document.createElement('div');
   overlay.className = 'lightbox-overlay';
-  document.body.appendChild(overlay);
-
   const img = document.createElement('img');
   img.className = 'lightbox-img';
   overlay.appendChild(img);
+  document.body.appendChild(overlay);
 
-  // Show lightbox on image click
-  document.querySelectorAll('.carousel-image').forEach(image => {
+  document.querySelectorAll('.carousel-image, .case-image').forEach(image => {
     image.style.cursor = 'zoom-in';
     image.addEventListener('click', () => {
       img.src = image.src;
@@ -128,15 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Hide lightbox on overlay or close click
-  overlay.addEventListener('click', (e) => {
+  overlay.addEventListener('click', e => {
     if (e.target === overlay || e.target === img) {
       overlay.classList.remove('active');
     }
   });
 
-  // Hide lightbox on ESC key
-  document.addEventListener('keydown', (e) => {
+  document.addEventListener('keydown', e => {
     if (e.key === 'Escape') overlay.classList.remove('active');
   });
 });
