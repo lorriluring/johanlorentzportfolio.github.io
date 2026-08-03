@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Shared Online Space · Johan Lorentz</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Johan Lorentz</a>
+      <div class="nav-links">
+        <a href="index.html#work" class="nav-back">&larr; Work</a>
+      </div>
+      <button id="darkModeToggle" aria-label="Toggle dark mode" class="darkmode-toggle-btn">
+        <svg viewBox="0 0 28 28" fill="none">
+          <path d="M21 18.5A10 10 0 0 1 9.5 7c0-.4 0-.8.1-1.2a1 1 0 0 0-1.3-1.2A12 12 0 1 0 22.4 22.2a1 1 0 0 0-1.2-1.3c-.4.1-.8.1-1.2.1Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <header class="case-header">
+      <p class="case-eyebrow">Halmstad University · 2022 · UX Research &amp; Design (with Julia Forssén)</p>
+      <h1>A Shared Online Space</h1>
+      <p class="case-deck">Designing an LMS feature that helps online students feel like they're studying alongside real people, not just logged-in usernames.</p>
+    </header>
+
+    <section class="case-section">
+      <div class="case-media">
+        <img src="images/onlinespace-overview.png" alt="Prototype overview: student list and activity tables" class="case-image" />
+      </div>
+      <h2>The challenge</h2>
+      <p>
+        Online education keeps fewer students to the finish line than campus programmes, and the literature points to a specific cause: a lack of informal communication. Campus students bump into each other in hallways and cafeteria queues; online students mostly don't. Existing LMS tools like discussion forums are built for coursework, not for the small, spontaneous exchanges that make people feel like they belong to a class. Bachelor's thesis, co-written with Julia Forssén, in Digital Design and Innovation at Halmstad University.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <div class="case-media">
+        <div class="carousel">
+          <button class="carousel-btn prev" aria-label="Previous image">&#8592;</button>
+          <div class="carousel-track">
+            <img src="images/onlinespace-scenario1.png" alt="Evaluation scenario: filling in current activity" class="carousel-image active" />
+            <img src="images/onlinespace-scenario2.png" alt="Evaluation scenario: simulated group chat" class="carousel-image" />
+          </div>
+          <button class="carousel-btn next" aria-label="Next image">&#8594;</button>
+        </div>
+      </div>
+      <h2>Process</h2>
+      <p>
+        A literature review broke informal communication into three components: spontaneity, interactivity, and presence, which produced six design goals. We built a Figma prototype on top of a modified Blackboard course page: a new "Student Room" chat tab layered onto the real LMS interface. Ten participants, recruited for prior LMS and online-course experience, worked through two evaluation scenarios while we observed, then followed up with semi-structured interviews and thematic analysis.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <h2>Key decisions</h2>
+      <ul class="case-list">
+        <li><strong>Simulate the chat, don't build it.</strong> We couldn't ship a working chat backend in scope, so the conversation was scripted. That kept the evaluation focused on what the feature communicates, not on chat infrastructure.</li>
+        <li><strong>Auto-assign tables, don't let users pick.</strong> Grouping participants automatically by the task they'd filled in removed a decision point that would have suppressed spontaneous contact, while still giving people something in common to talk about.</li>
+        <li><strong>Presence over polish.</strong> Status icons and a live-feeling activity board did more for participants' sense of "other real people are here" than any single communication feature did on its own.</li>
+      </ul>
+    </section>
+
+    <section class="case-section">
+      <div class="case-media">
+        <div class="carousel">
+          <button class="carousel-btn prev" aria-label="Previous image">&#8592;</button>
+          <div class="carousel-track">
+            <img src="images/onlinespace-friendslist.png" alt="Design proposal: presence-aware student list" class="carousel-image active" />
+            <img src="images/onlinespace-activitydesc.png" alt="Design proposal: activity description" class="carousel-image" />
+            <img src="images/onlinespace-tableassign.png" alt="Design proposal: automatic table assignment" class="carousel-image" />
+            <img src="images/onlinespace-emoticon.png" alt="Design proposal: emoticon reactions in chat" class="carousel-image" />
+            <img src="images/onlinespace-profile.png" alt="Design proposal: personal user profile" class="carousel-image" />
+          </div>
+          <button class="carousel-btn next" aria-label="Next image">&#8594;</button>
+        </div>
+      </div>
+      <h2>Outcome</h2>
+      <p>
+        The evaluation converged into five design proposals for supporting informal communication on any LMS:
+      </p>
+      <ul class="case-list">
+        <li><strong>Design for introduction and observation.</strong> Let students watch a group's tone before joining in, so they can gauge what's normal before they speak.</li>
+        <li><strong>Design for identifying something in common.</strong> Surface shared activity or interests so a conversation has a natural opening line.</li>
+        <li><strong>Design for a visual sense of shared space.</strong> Represent presence visually, not just as a list of names.</li>
+        <li><strong>Design for control over participation.</strong> Let students choose how involved they want to be, rather than forcing engagement.</li>
+        <li><strong>Design for personal and social impressions.</strong> Profiles and small expressive touches like emoticons make other users read as real people.</li>
+      </ul>
+    </section>
+
+    <section class="case-section">
+      <h2>Reflection</h2>
+      <p>
+        The honest finding was a limit, not a clean win: the proposals supported informal communication, but couldn't guarantee it happened, since outside factors (culture, personality, prior relationships) shape whether people actually talk to each other. That's a useful result in itself, and it pointed toward a concrete next step: exploring a digital equivalent of "nollning," the orientation events Swedish universities run to introduce campus students to each other, as a way to kickstart the social trust that features alone can't manufacture.
+      </p>
+      <p><a href="documents/johan-lorentz-bachelor-thesis.pdf" target="_blank" rel="noopener">Read the full thesis (PDF) &rarr;</a></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer container">
+    &copy; Johan Lorentz 2026
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
