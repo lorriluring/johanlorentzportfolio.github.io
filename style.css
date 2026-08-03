@@ -279,6 +279,26 @@ h2.section-heading {
   background: var(--accent);
 }
 
+/* ---------- Skills ---------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem 3rem;
+  margin-top: 1.4rem;
+  max-width: 62ch;
+}
+.skills-subhead {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 0.9rem;
+}
+.skills-grid .about-list {
+  margin-top: 0;
+}
+
 /* ---------- Work / project grid ---------- */
 .work-grid {
   display: grid;
